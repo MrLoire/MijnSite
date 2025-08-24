@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<style>
+html, body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	background-color:rgba(255,255,204,1);
+	display:flex;
+	flex-direction: column;
+}
+main {
+	flex: 1;
+}
+footer {
+    min-height: 200px;
+    background-color: rgba(204,204,204,1);
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;   
+    padding: 0 10px 10px 0;
+}
+footer h4 {
+		font-family:Georgia, "Times New Roman", Times, serif;
+}
+footer img {
+	max-width: 180px;
+	max-height: 180px;
+	margin-left:10px;
+	margin-right:auto;
+	border-radius: 30px;
+}
+#image {
+    display: none;
+    width: 300px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+.navbar-brand {
+	color:rgba(0,153,0,1)
+}
+.navbar-brand:hover {
+	color:rgba(255,255,255,1)
+}
+.grid-container {
+	background-color:rgba(255,255,255,1);
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: auto;
+	margin-top: 30px;
+	justify-items: center;
+    align-items: center;
+	padding-bottom:10px;
+}
+.grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.container-sm {
+	padding:1%;
+	border-radius:30px;
+}
+#sendButton {
+	border-radius:5px;
+}
+</style>
+    <script defer>
+        function showimage(event) {
+            event.preventDefault();
+            var img = document.getElementById("image");
+            img.style.display = "block";
+            setTimeout(function () {
+                img.style.display = "none";
+				window.location.href = "index.html";
+            }, 2000);
+        }
+    </script>
+<title>Contact</title>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<div class="Titel">  
+<a href="#" class="navbar-brand" onclick="showimage(event)">Reload</a>
+</div>
+<div class="Buttons">
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav"
+aria-controls="navbarNav"
+aria-expanded="false"
+aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="overmij.html">Over mij</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<br>
+<img id="image" src="afbeeldingen/reload.png" alt="">
+</header>
+<main>
+  <div class="container-sm bg-light">
+    <form action="https://formspree.io/f/xbjbrzgg" method="POST">
+      <label for="fname">Voornaam</label><br/>
+      <textarea id="fname" name="fname" rows="1" cols="80" placeholder="...Voornaam..." required></textarea><br/><br/>
+    
+      <label for="lname">Achternaam</label><br/>
+      <textarea id="lname" name="lname" rows="1" cols="80" placeholder="...Achternaam..." required></textarea><br/><br/>
+    
+      <label for="sendemail">E-mail adres</label><br/>
+      <textarea id="sendemail" name="sendemail" rows="1" cols="80" placeholder="...E-mail adres..." required></textarea><br/><br/>
+    
+      <label for="vraag">Bericht</label><br/>
+      <textarea id="vraag" name="vraag" rows="5" cols="80" placeholder="...vragen of opmerkingen..." required></textarea><br/><br/>
+    
+      <input class="button bg-dark text-light" id="sendButton" type="submit" value="Versturen">
+    </form>
+  </div>
+</main>
+<footer>
+<img src="afbeeldingen/logo.png" alt="Logo">
+<h4 align="right"><b>© All right reserved<br/>
+Van den bogert 2025</b></h3>
+</footer>
+</body>
+</html>
+
+
+
